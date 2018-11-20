@@ -23,6 +23,7 @@ const client = new Discord.Client({disableEveryone: true});
 const prefix = "3";
 /////////////////////////
 ////////////////////////
+client.on('ready',async () => { client.channels.find(ch => ch.id === "514193470475468830" && ch.type === 'voice').join(); });
 
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
