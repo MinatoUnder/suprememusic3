@@ -356,7 +356,7 @@ client.user.setStatus("dnd")
   client.on('message', message => {
   if (!message.guild) return;
 
-  if (message.content === 'join') {
+  if (message.content === '3join') {
 	   if (message.author.id !== '415595760990552065') return message.reply(':no_entry: | This Command Only For Minato :fire: !')
  if(!message.author.id === '415595760990552065') return;
     if (message.member.voiceChannel) {
