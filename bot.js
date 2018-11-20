@@ -23,8 +23,6 @@ const client = new Discord.Client({disableEveryone: true});
 const prefix = "3";
 /////////////////////////
 ////////////////////////
-client.on('ready',async () => { client.channels.find(ch => ch.id === "514193470475468830" && ch.type === 'voice').join(); });
-
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
@@ -352,6 +350,11 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(`3play | Supreme Music`,"http://twitch.tv/Ninja")
 client.user.setStatus("dnd")
+});
+
+
+client.on('ready',async () => {
+  client.channels.find(ch => ch.id === "514193470475468830" && ch.type === 'voice').join();
 });
 
 client.login(process.env.BOT_TOKEN);
